@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<title>Rarefied Redis by wilkenstein</title>
+
+<link rel="stylesheet" href="stylesheets/styles.css">
+<link rel="stylesheet" href="stylesheets/pygment_trac.css">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<!--[if lt IE 9]>
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+</head>
+<body>
+<div class="wrapper">
+  <header>
+  <h1>Rarefied Redis</h1>
+  <p>The Rarefied Redis Project</p>
+  
+  <p class="view">
+  View the GitHub Repos:
+  <table>
+    <tbody>
+      <tr>
+        <td>JavaScript</td><td><a href="https://github.com/wilkenstein/rarefied-redis-js">rarefied-redis-js</a></td><td><a href="https://github.com/wilkenstein/redis-mock-js">redis-mock-js</a></td>
+      </tr>
+      <tr>
+        <td>Java</td><td><a href="https://github.com/wilkenstein/rarefied-redis-java">rarefied-redis-java</a></td><td><a href="https://github.com/wilkenstein/redis-mock-java">redis-mock-java</a></td>
+      </tr>
+      <tr>
+        <td>Python</td><td></td><td></td>
+      </tr>
+      <tr>
+        <td>Ruby</td><td></td><td></td>
+      </tr>
+      <tr>
+        <td>Go</td><td></td><td></td>
+      </tr>
+    </tbody>
+  </table>
+  </p>
+  
+  </header>
+  
+  <section>
+  
+  <h3>
+  Purpose
+  </h3>
+
+  <p>
+  The purpose of this project is to provide high-quality, battle-hardened, efficient Abstractions on top of <a href="http://redis.io">redis</a>. redis is awesome! It's also an interesting base to build upon. Mature, scalable, easy to grok, easy to develop against, deep, and just enough features to tantalize the imagination.
+  <br/>
+  <br/>
+  This project is not intended to replace, subvert, or otherwise suggest that redis is the best tool for any given Abstraction. It is as much about finding the limits of redis as it is about providing working code.
+  </p>
+
+  <h3>
+  What the Heck Is an Abstraction?
+  </h3>
+
+  <p>
+  As Programmers, our lives are about abstraction. Machine code abstracts away the electronics, languages abstract away the machine code, other languages abstract away these languages, and Theoretical Computer Science abstracts away the Computer! It's turtles all the way down.
+  <br/>
+  <br/>
+  Since this project started with ideas such as a <b>Guaranteed Message Queue</b> and <b>Time Series</b>, it seemed appropriate to think of this project as providing yet-more abstractions. In this case, Abstractions upon redis. In some cases, these Abstractions are what we might traditionally call Data Structures, but in other instances, such as a <b>Reliable Lock</b>, the term is not general enough.
+  <br/>
+  <br/>
+  An Abstraction is composed of two parts: its Semantics, and its Operation. Semantics are what the Abstraction means. For instance, a <b>Reliable Lock</b> <i>means</i> that one and only one requester can lock it at a time, and the lock is always unlocked. Its Operation, in contrast, is what the Abstraction does. For instance, a simple <a href="http://redis.io/topics/distlock">non-distributed redlock</a> uses the redis string data type coupled with certain commands to implement Reliable Lock Semantics.
+  </p>
+  
+  <h3>
+  Abstractions
+  </h3>
+
+
+  <h3>
+  <a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span class="octicon octicon-link"></span></a>
+  Authors and Contributors
+  </h3>
+
+  <p>
+  @wilkenstein
+  </p>
+
+  <h3>
+  <a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span class="octicon octicon-link"></span></a>
+  Support or Contact
+  </h3>
+
+  <p>
+  <a href="mailto:wilke.brian@gmail.com">wilke.brian@gmail.com</a>
+  </p>
+
+  </section>
+    
+  </body>
+</html>
