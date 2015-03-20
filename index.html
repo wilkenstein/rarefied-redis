@@ -20,7 +20,7 @@
   
   <p class="view">
   <b>View the GitHub Repos</b>
-  <table>
+  <table class="repos" style="border:1px solid #e5e5e5;">
     <tbody>
       <tr>
         <td>JavaScript</td><td><a href="https://github.com/wilkenstein/rarefied-redis-js">rarefied-redis-js</a></td><td><a href="https://github.com/wilkenstein/redis-mock-js">redis-mock-js</a></td>
@@ -50,10 +50,10 @@
   </h3>
 
   <p>
-  The purpose of this project is to provide high-quality, battle-hardened, efficient Abstractions on top of <a href="http://redis.io">redis</a>. redis is awesome! It's also an interesting base to build upon. Mature, scalable, easy to grok, easy to develop against, deep, and just enough features to tantalize the imagination.
+  The purpose of this project is to provide high-quality, battle-hardened, efficient <b>Abstractions</b> on top of <a href="http://redis.io"><b>redis</b></a>. <b>redis</b> is awesome! It's also an interesting base to build upon. Mature, scalable, easy to grok, easy to develop against, deep, and just enough features to tantalize the imagination.
   <br/>
   <br/>
-  This project is not intended to replace, subvert, or otherwise suggest that redis is the best tool for any given Abstraction. It is as much about finding the limits of redis as it is about providing working code.
+  This project is not intended to replace, subvert, or otherwise suggest that <b>redis</b> is the best tool for any given <b>Abstraction</b>. It is as much about finding the limits of <b>redis</b> as it is about providing working code.
   </p>
 
   <h3>
@@ -64,16 +64,55 @@
   As Programmers, our lives are about abstraction. Machine code abstracts away the electronics, languages abstract away the machine code, other languages abstract away these languages, and Theoretical Computer Science abstracts away the Computer! It's turtles all the way down.
   <br/>
   <br/>
-  Since this project started with ideas such as a <b>Guaranteed Message Queue</b> and <b>Time Series</b>, it seemed appropriate to think of this project as providing yet-more abstractions. In this case, Abstractions upon redis. In some cases, these Abstractions are what we might traditionally call Data Structures, but in other instances, such as a <b>Reliable Lock</b>, the term is not general enough.
+  Since this project started with ideas such as a <b>Guaranteed Message Queue</b> and <b>Time Series</b>, it seemed appropriate to think of this project as providing yet-more abstractions. In this case, <b>Abstractions</b> upon <b>redis</b>. In some cases, these <b>Abstractions</b> are what we might traditionally call Data Structures, but in other instances, such as a <b>Reliable Lock</b>, the term is not general enough.
   <br/>
   <br/>
-  An Abstraction is composed of two parts: its Semantics, and its Operation. Semantics are what the Abstraction means. For instance, a <b>Reliable Lock</b> <i>means</i> that one and only one requester can lock it at a time, and the lock is always unlocked. Its Operation, in contrast, is what the Abstraction does. For instance, a simple <a href="http://redis.io/topics/distlock">non-distributed redlock</a> uses the redis string data type coupled with certain commands to implement Reliable Lock Semantics.
+  An <b>Abstraction</b> is composed of two parts: its <b>Semantics</b>, and its <b>Operation</b>. Semantics are what the <b>Abstraction</b> means. For instance, a <b>Reliable Lock</b> <i>means</i> that one and only one requester can lock it at a time, and the lock is always unlocked. Its Operation, in contrast, is what the <b>Abstraction</b> does. For instance, a simple <a href="http://redis.io/topics/distlock"><b>non-distributed redlock</b></a> uses the <b>redis</b> string data type coupled with certain commands to implement Reliable Lock Semantics.
   </p>
   
   <h3>
   Abstractions
   </h3>
 
+  <p>
+  TODO: List of abstractions will go here!
+  </p>
+
+  <h3>
+  Redis "Mock"s
+  </h3>
+
+  <p>
+  A key part of the Rarefied Redis project is unit testing. However, when interacting with <b>redis</b>, we presume a certain service available to us with a certain version, which really stretches into the bounds of integration testing.
+  <br/>
+  <br/>
+  When beginning this project, mocking <b>redis</b> was used to unit test. The breadth of Rarefied Redis meant that almost all of <b>redis</b> had to be mocked! Not fun.
+  <br/>
+  <br/>
+  To bring some (in)sanity to this process, we began writing in-memory "mocks" that operated like a real <b>redis</b> instance. These mocks provide functionality to swap the regular client, e.g., <a href="https://github.com/mranney/node_redis">node_redis</a>, with an in-memory compatible implementation.
+  <br/>
+  <br/>
+  As we continued writing, these "mocks" morphed into something else. We could call them implementations of the <b>redis specification</b>. But we shouldn't, because they really aren't at this point. Perhaps one day they will be!
+  <br/>
+  <br/>
+  Each language's mock is at various stages of implementation and development. Currently, the JavaScript mock is the most complete, with the Java mock following in its heels. They are intended to be written in a <b>pure</b> style in each language, such that there are no external dependencies or weird version conflicts. For instance, the JavaScript mock can run on any JavaScript engine, barring perhaps some old ones.
+  </p>
+
+  <h3>
+  Other Redis Projects You Should Check Out!
+  </h3>
+
+  <table>
+    <tr>
+      <td><a href="https://github.com/mranney/node_redis">node_redis</a></td><td>Obvi! redis client for node.js</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/mrniko/redisson">Redisson</a></td><td>Distributed and Scalable Java Data Structures</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/xetorthio/jedis">Jedis</a></td><td>Blazingly small and sane Java <b>redis</b> client</td>
+    </tr>
+  </table>
 
   <h3>
   <a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span class="octicon octicon-link"></span></a>
@@ -90,7 +129,7 @@
   </h3>
 
   <p>
-  <a href="mailto:wilke.brian@gmail.com">wilke.brian@gmail.com</a>
+  <a href="mailto:wilke.brian@gmail.com"><b>wilke.brian@gmail.com</b></a>
   </p>
 
   </section>
